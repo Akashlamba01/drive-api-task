@@ -2,7 +2,7 @@
 
 ## Note:-
 
-### don't worrey about the json key it is valid till 5 days and than it will remove. it is use only for your simplification.
+### don't worrey about the json key and postman collection it is valid till 5 days and than it will remove. it is use only for your simplification.
 
 # Drive file transfer
 
@@ -50,4 +50,4 @@ To set up the project on your local system, follow the instructions below.
 
 # Note:-
 
-## make sure the file sharing publicly from your drive and folder which you want to receive video should be share and edit publicaly.
+## make sure that the file sharing is publicly in your drive that you want to upload and the folder sharing is also publicly and edit any one in your drive where you want to recive a video file.
