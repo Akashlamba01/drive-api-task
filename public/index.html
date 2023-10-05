@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File Transfer Progress</title>
+  </head>
+
+  <body>
+    <h1>File Transfer Progress</h1>
+
+    <div id="download-progress">
+      <h2>Download Progress</h2>
+      <h3>Status: Waiting!</h3>
+    </div>
+
+    <div id="upload-progress">
+      <h2>Upload Progress</h2>
+      <h3>Status: Waiting!</h3>
+    </div>
+
+    <script>
+      const downloadProgress = document.getElementById("download-progress");
+      const uploadProgress = document.getElementById("upload-progress");
+      const eventSource = new EventSource("/api/getStatus");
+
+      eventSource.addEventListener("download-progress", (event) => {
+        const data = JSON.parse(event.data);
+        updateProgress(downloadProgress, data);
+      });
+
+      eventSource.addEventListener("upload-progress", (event) => {
+        const data = JSON.parse(event.data);
+        updateProgress(uploadProgress, data);
+      });
+
+      function updateProgress(element, data) {
+        element.querySelector("h3").textContent = `Status: ${data.message}`;
+      }
+    </script>
+  </body>
+</html>
