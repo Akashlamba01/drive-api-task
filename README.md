@@ -40,13 +40,13 @@ To set up the project on your local system, follow the instructions below.
 1. Start the server:
    npm start
 
-2. Open your postman and send the req to http://localhost:3001/api/transfer-video?googleDriveVideoID=key&googleDriveDirectoryID=key for transfer the video file.
+2. Open your postman and send the req to http://localhost:3001/api/transfer-video?googleDriveVideoID=key&googleDriveDirectoryID=key after puting the videoId and directoryId for transfer the video file.
 
 3. Use the Key from your drive VIDEO_FILE_ID as a googleDriveVideoID query && DESTINATION_DIRECTORY_ID as a googleDriveDirectoryID query
    // https://drive.google.com/drive/folders/DESTINATION_DIRECTORY_ID
    // https://drive.google.com/file/d/VIDEO_FILE_ID/view
 
-4. Open your browser set req to http://localhost:3001/api for chacking file status. first it get waiting and change auto after the work done.
+4. Open your browser and send req to http://localhost:3001/status for chacking the file status. first it get waiting and change auto after the work done.
 
 # Note:-
 
